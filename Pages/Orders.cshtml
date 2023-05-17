@@ -1,0 +1,44 @@
+@page
+@model cPizza.Pages.Orders
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h1>Orders</h1>
+
+<hr/>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model.PizzaOrders)
+        {
+        <tr>
+            <th>
+                @order.Id
+            </th>
+            <th>
+                @order.PizzaName
+            </th>
+            <th>
+                @order.BasePrice
+            </th>
+        </tr>   
+        }
+    </tbody>
+</table>
+<div>
+    
+</div>

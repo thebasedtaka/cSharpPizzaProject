@@ -1,0 +1,33 @@
+@page
+@model cPizza.Pages.Forms.CustomPizza
+@{
+    ViewData["Title"] = "CustomPizza";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center container">
+    <h1>Create Your Pizza</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 bg-light col-4">
+        <input type="text" asp-for="Pizza.PizzaName" placeholder="Name your pizza.."/>
+        <input type="checkbox" asp-for="Pizza.TomatoSauce" placeholder="Tomato Sauce"> Tomato Sauce</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.Cheese" placeholder="Cheese"> Cheese</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.Chicken" placeholder="Chicken"> Chicken</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.GroundBeef" placeholder="Ground Beef"> Ground Beef</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.TomatoSauce" placeholder="Pineapple"> Pineapple</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.Mushrooms" placeholder="Mushrooms"> Mushrooms</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.GreenPeppers" placeholder="Green Peppers"> Green Peppers</input>
+        <br/>
+        <input type="checkbox" asp-for="Pizza.RedPeppers" placeholder="Red Peppers"> Red Peppers</input>
+        <br/>
+        <button class="btn btn-primary mt-1" type="submit" >Order</button>
+        <br/>
+    </form>
+    <a class="nav-link text-dark" asp-area="" asp-page="Checkout/Checkout">Checkout</a>
+</div>
